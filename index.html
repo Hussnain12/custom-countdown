@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Custom Countdown</title>
+        <link rel="icon" type="image/png" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <video class="video-background" loop muted autoplay>
+            <source src="time.mp4">
+        </video>
+        <div class="video-overlay"> </div>
+        <div class="container">
+            <div class="input-container" id="input-container" >
+                <h1>Create a custom Countdown</h1>
+                <form class="form" id="countdownform">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="What are u counting down to" required>
+                    <label for="date-picker" >select a date </label>
+                    <input type="date" id="date-picker" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="countdown" id="countdown" hidden>
+                <h1 id="countdown-title">Countdown Title Here</h1>
+                <ul>
+                    <li><span class="span1"> </span>Days</li>
+                    <li><span class="span2"> </span>hours</li>
+                    <li><span class="span3"> </span>Minutes</li>
+                    <li><span class="span4"> </span>seconds</li>
+                </ul>
+                <button id="countdown-button">Reset</button>
+            </div>
+            <div class="complete" id="complete" hidden>
+                <h1 class="complete-title">Countdown complete</h1>
+                <h1 id="complete-info"></h1>
+                <button class="complete-button">New Countdown</button>
+            </div>
+        </div>
+        <!-- Script -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>
